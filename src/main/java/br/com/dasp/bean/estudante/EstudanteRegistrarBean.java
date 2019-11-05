@@ -2,6 +2,7 @@ package br.com.dasp.bean.estudante;
 
 import br.com.dasp.model.Estudante;
 
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.*;
@@ -9,13 +10,33 @@ import java.util.*;
 import static java.util.Arrays.asList;
 
 @Named
+@ViewScoped
 public class EstudanteRegistrarBean implements Serializable {
     private Estudante estudante = new Estudante();
     private String[] nomeEstudante = {"Marina", "e", "Samuel", "sao", "lindos"};
     private List<String> nomeEstudant = asList("Marina", "e", "Samuel", "sao", "maravilhosos");
     private Set<String> nomesSet = new HashSet<>(asList("Marina2", "e2", "Samuel2", "sao2", "maravilhosos2"));
     private Map<String, String> nomesMap = new HashMap<>();
+    private boolean mostrarNotas;
 
+    public void exibirNotas(){
+        this.mostrarNotas = true;
+
+    }
+    public void esconderNotas(){
+        this.mostrarNotas = false;
+
+    }
+
+
+
+    public boolean isMostrarNotas() {
+        return mostrarNotas;
+    }
+
+    public void setMostrarNotas(boolean mostrarNotas) {
+        this.mostrarNotas = mostrarNotas;
+    }
 
     public Map<String, String> getNomesMap() {
         return nomesMap;

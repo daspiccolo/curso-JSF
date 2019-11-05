@@ -6,7 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="262195f1-24f9-436e-8b61-e9fa07318303" name="Default Changelist" comment="" />
+    <list default="true" id="262195f1-24f9-436e-8b61-e9fa07318303" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dasp/bean/estudante/EstudanteRegistrarBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dasp/bean/estudante/EstudanteRegistrarBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dasp/model/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dasp/model/Estudante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +26,9 @@
         <option value="jsf" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/web/index.xhtml" root0="FORCE_HIGHLIGHTING" />
@@ -369,10 +377,25 @@
       <updated>1572695476908</updated>
       <workItem from="1572695479019" duration="8881000" />
       <workItem from="1572777952243" duration="5291000" />
+      <workItem from="1572870383150" duration="37000" />
+      <workItem from="1572870494150" duration="3874000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -5,7 +5,7 @@ import br.com.dasp.model.enums.Turno;
 public class Estudante {
     private String nome = "Debora";
     private String sobrenome = "Piccolo";
-    private double nota1;
+    private double nota1 = 9;
 
     public Turno getTurno() {
         return turno;
@@ -15,7 +15,7 @@ public class Estudante {
         this.turno = turno;
     }
 
-    private double nota2;
+    private double nota2 = 9.8;
     private double nota3 = 10;
     private Turno turno = Turno.MATUTINO;
 

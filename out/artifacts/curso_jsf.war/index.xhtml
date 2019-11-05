@@ -7,6 +7,9 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <f:view>
+    <h:head>
+
+    </h:head>
     <body>
     <p:importEnum type="br.com.dasp.model.enums.Turno" var="Turno" allSuffix="ALL_ENUM_VALUES"/>
     <h:outputLabel value="Hello, Debora Linda!"/><br/>
@@ -46,7 +49,7 @@
     #{estudanteRegistrarBean.executarRetorno(estudanteRegistrarBean.estudante.nome)}
 
     <h:form>
-       <h:commandButton value="ir para prox pagina" action="#{estudanteRegistrarBean.irParaIndex2()}"/>
+        <h:commandButton value="ir para prox pagina" action="#{estudanteRegistrarBean.irParaIndex2()}"/>
         <h:commandButton value="faz magia" onclick="fazMagica('hadouken')"/>
         <h:commandButton value="alert nome" onclick="alertNome('#{estudanteRegistrarBean.estudante.nome}')"/>
     </h:form>
@@ -55,12 +58,35 @@
 
         <h:outputLabel value="#{nome}" style="color: #{status.index mod 2 == 0 ? 'red' : 'green'}"/><br/>
     </ui:repeat>
+    <br/>
+    <h:form>
+        <h:commandButton value="Exibir Notas">
+            <f:ajax render="notasGrid" listener="#{estudanteRegistrarBean.exibirNotas()}"/>
+          
+        </h:commandButton>
+        <h:commandButton value="Esconder Notas">
+            <f:ajax render="notasGrid" listener="#{estudanteRegistrarBean.esconderNotas()}"/>
+            <br/>
+        </h:commandButton>
+        <h:panelGrid id="notasGrid">
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nome}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.sobrenome}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.turno}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nota1}"
+                          rendered="#{estudanteRegistrarBean.mostrarNotas}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nota2}"
+                          rendered="#{estudanteRegistrarBean.mostrarNotas}"/>
+            <h:outputText value="#{estudanteRegistrarBean.estudante.nota3}"
+                          rendered="#{estudanteRegistrarBean.mostrarNotas}"/>
+        </h:panelGrid>
+    </h:form>
     </body>
     <script type="text/javascript">
         function fazMagica(magica) {
             alert(magica);
 
         }
+
         function alertNome(nome) {
             alert(nome);
 
